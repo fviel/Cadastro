@@ -28,8 +28,8 @@
                 <div class="card text-white bg-dark mb-3" >                    
                     <div class="card-body">
                         <h5 class="card-title">Clientes</h5>
-                        <p class="card-text">Tesiuhnvionfvoie eroifjmd oçfer oijfreoifjaeirj refioj soifjasd joidj</p>
-                        <a href="/clientes" class="btn btn-outline-success btn-sm btn-block" disabled>Cadastre seus Produtos</a>
+                        <p class="card-text">Cadastro dinâmico de clientes</p>
+                        <a href="/clientes" class="btn btn-outline-success btn-sm btn-block" >Cadastro de Clientes</a>
                         
                     </div>
                 </div>
