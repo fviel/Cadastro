@@ -20,15 +20,15 @@
                             @csrf
                             <div class="form-group">
                                 <label for="nome">Nome completo</label>
-                                <input type="text" id="nome" class="form-control" name="nome" placeholder="Nome completo do cliente" required="true" maxlength="512">
+                                <input type="text" id="name" class="form-control" name="name" placeholder="Nome completo do cliente" required="true" maxlength="512">
                             </div>
                             <div class="form-group">
                                 <label for="nome">Data de nascimento</label>
-                                <input type="date" id="birthdate" class="form-control" name="idade" placeholder="Idade do cliente" required="true" min="0" max="100">
+                                <input type="date" id="birthdate" class="form-control" name="birthdate" placeholder="Idade do cliente" required="true" min="0" max="100">
                             </div>
                             <div class="form-group">
                                 <label for="nome">Endereço</label>
-                                <input type="text" id="endereco" class="form-control" name="endereco" placeholder="Endereço completo do cliente" required="true" >
+                                <input type="text" id="address" class="form-control" name="address" placeholder="Endereço completo do cliente" required="true" >
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail</label>
