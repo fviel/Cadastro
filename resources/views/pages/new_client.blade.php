@@ -23,7 +23,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="nome">Idade</label>
-                                <input type="number" id="idade" class="form-control" name="idade" placeholder="Idade do cliente" required="true" min="0" max="100">
+                                <input type="date" id="birthdate" class="form-control" name="idade" placeholder="Idade do cliente" required="true" min="0" max="100">
                             </div>
                             <div class="form-group">
                                 <label for="nome">Endereço</label>
