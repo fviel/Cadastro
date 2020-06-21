@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Client;
 
 class ClientController extends Controller
 {
@@ -13,7 +14,9 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('pages.index_clients');
+        //obtem o array de todos os clientes do BD
+        $clientes = Client::all();
+        return view('pages.index_clients', compact('clientes'));
     }
 
     /**
