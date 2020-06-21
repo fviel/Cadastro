@@ -37,7 +37,37 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+         //forma correta de validar
+        $regras = [
+            'name' => 'required|min:3|max:60|unique:clients',
+            'bithdate' => 'required',
+            'address' => 'required',
+            'email' => 'required|email'
+        ];
+
+        //especificando mensagens genéricas
+        $mensagens = [
+            'required' => 'O atributo :attribute deve ser informado.',
+            'unique' => 'O atributo :attribute deve ser único no sistema.',
+            'email' => 'O campo :attribute não apresenta um endereço de email válido.'
+        ];
+        //$request->validate($regras, $mensagens);
+
+        //especificando campo por campo...
+        /*$mensagens = [
+            'nome.required' => 'O nome do cliente é um campo obrigatório',
+            'nome,unique' => 'O nome do cliente deve ser único no sistema'
+        ];*/  
+
+        $cliente = new Client;
+        $cliente->name = $request->input('name');
+        $cliente->birthdate = $request->input('birthdate');
+        $cliente->address = $request->input('address');
+        $cliente->email = $request->input('email');
+        $cliente->save();
+
+        return redirect('/clientes');        
     }
 
     /**
