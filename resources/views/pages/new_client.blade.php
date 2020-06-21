@@ -17,12 +17,13 @@
                     </div>                    
                     <div class="card-body">
                         <form action="/clientes" method="POST">
+                            @csrf
                             <div class="form-group">
                                 <label for="nome">Nome completo</label>
                                 <input type="text" id="nome" class="form-control" name="nome" placeholder="Nome completo do cliente" required="true" maxlength="512">
                             </div>
                             <div class="form-group">
-                                <label for="nome">Idade</label>
+                                <label for="nome">Data de nascimento</label>
                                 <input type="date" id="birthdate" class="form-control" name="idade" placeholder="Idade do cliente" required="true" min="0" max="100">
                             </div>
                             <div class="form-group">
