@@ -52,7 +52,7 @@ class ClientController extends Controller
             'unique' => 'O atributo :attribute deve ser único no sistema.',
             'email' => 'O campo :attribute não apresenta um endereço de email válido.'
         ];
-        //$request->validate($regras, $mensagens);
+        $request->validate($regras, $mensagens);
 
         //especificando campo por campo...
         /*$mensagens = [

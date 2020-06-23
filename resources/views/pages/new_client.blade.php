@@ -20,19 +20,19 @@
                             @csrf
                             <div class="form-group">
                                 <label for="nome">Nome completo</label>
-                                <input type="text" id="name" class="form-control" name="name" placeholder="Nome completo do cliente" required="true" maxlength="512">
+                                <input type="text" id="nameid" class="form-control" name="name" placeholder="Nome completo do cliente" maxlength="512">
                             </div>
                             <div class="form-group">
                                 <label for="nome">Data de nascimento</label>
-                                <input type="date" id="birthdate" class="form-control" name="birthdate" placeholder="Idade do cliente" required="true" min="0" max="100">
+                                <input type="date" id="birthdateid" class="form-control" name="birthdate" placeholder="Idade do cliente" >
                             </div>
                             <div class="form-group">
                                 <label for="nome">Endereço</label>
-                                <input type="text" id="address" class="form-control" name="address" placeholder="Endereço completo do cliente" required="true" >
+                                <input type="text" id="addressid" class="form-control" name="address" placeholder="Endereço completo do cliente"  maxlength="1024">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail</label>
-                                <input type="mail" id="email" class="form-control" name="email" placeholder="E-mail do cliente" >
+                                <input type="mail" id="emailid" class="form-control" name="email" placeholder="E-mail do cliente"  maxlength="512">
                             </div>
                             <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
                             <button type="cancel" class="btn btn-danger btn-sm">Cancelar</button>
@@ -42,5 +42,15 @@
             </div>
         </div>
     </main>
+    @if(isset($errors))
+    <div class="card-footer">
+        @foreach ( $errors->all as $error )
+            <div class="alert alert-danger" role="alert">
+                {{ $error }}
+            </div>
+        @endforeach   
+    </div>
+        {{ var_dump($errors) }}
+    @endif
     
 @endsection
